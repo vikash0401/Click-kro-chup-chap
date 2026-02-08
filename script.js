@@ -2,7 +2,20 @@
 let currentPage = 0;
 const pages = document.querySelectorAll(".page");
 
+/* 🎵 MUSIC CONTROL */
+const music = document.getElementById("bg-music");
+let musicStarted = false;
+
 function nextPage() {
+  // START MUSIC ON FIRST "NEXT" CLICK
+  if (!musicStarted) {
+    music.play().then(() => {
+      musicStarted = true;
+    }).catch(() => {
+      console.log("Music blocked");
+    });
+  }
+
   pages[currentPage].classList.remove("active");
   currentPage++;
   pages[currentPage].classList.add("active");
@@ -16,17 +29,7 @@ function toggleMode() {
   btn.textContent = document.body.classList.contains("night") ? "☀️" : "🌙";
 }
 
-/* 🎵 Music (continuous) */
-let musicStarted = false;
-function startMusic() {
-  const music = document.getElementById("bg-music");
-  if (!musicStarted) {
-    music.play();
-    musicStarted = true;
-  }
-}
-
-/* ✍️ Typewriter */
+/* ✍️ TYPEWRITER */
 function startTyping(page) {
   const elements = page.querySelectorAll(".typewriter");
   elements.forEach(el => {
@@ -43,7 +46,7 @@ function startTyping(page) {
 
 startTyping(pages[0]);
 
-/* 🌸 Sakura Petals */
+/* 🌸 SAKURA PETALS */
 const canvas = document.getElementById("sakura");
 const ctx = canvas.getContext("2d");
 
