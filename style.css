@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f6f3;
+  font-family: 'Kosugi Maru', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.book {
+  width: 92%;
+  max-width: 380px;
+}
+
+.page {
+  display: none;
+  background: white;
+  border: 3px solid black;
+  padding: 20px;
+  box-shadow: 8px 8px 0 black;
+  animation: fade 0.6s ease;
+}
+
+.page.active {
+  display: block;
+}
+
+h1, h2 {
+  font-family: 'Rampart One', cursive;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  border: 2px solid black;
+  margin: 15px 0;
+}
+
+.bubble {
+  border: 2px solid black;
+  padding: 12px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 20px;
+  border: 14px solid transparent;
+  border-top-color: black;
+}
+
+.left {
+  margin-right: 30px;
+}
+
+.right {
+  margin-left: 30px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 18px;
+  background: black;
+  color: white;
+  border: none;
+  font-family: 'Rampart One', cursive;
+  cursor: pointer;
+}
+
+.surprise {
+  text-align: center;
+}
+
+.soft-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.gift-img {
+  width: 100%;
+  border: 3px solid black;
+  margin: 15px 0;
+  animation: pop 0.8s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateX(15px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

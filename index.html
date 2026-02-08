@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Unnati 🌙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Manga Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="book">
+
+  <!-- PAGE 1 -->
+  <section class="page active">
+    <h1>Happy Birthday</h1>
+    <img src="her.jpg" class="hero-img">
+
+    <div class="bubble">
+      <p class="typewriter" data-text="On this day… someone very special was born."></p>
+    </div>
+
+    <button onclick="nextPage()">Next ▶</button>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page">
+    <div class="bubble">
+      <p class="typewriter" data-text="Happy Birthday, Unnati 🌙🖤"></p>
+    </div>
+
+    <div class="bubble left">
+      <p class="typewriter" data-text="From randomly ghosting me one fine day to somehow becoming someone I talk to almost every day — still kinda wild to me. Iconic behavior, honestly."></p>
+    </div>
+
+    <button onclick="nextPage()">Next ▶</button>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="page">
+    <div class="bubble right">
+      <p class="typewriter" data-text="You’re overconfidently wrong about Bollywood movies (stop boasting about watching them when you haven’t), a professional unpaid people-pleaser, a manga paglu with Taylor Swift 🥴 permanently playing, and someone who sings unfairly well (please apne Tourette Syndrome ka kuch karo)."></p>
+    </div>
+
+    <button onclick="nextPage()">Next ▶</button>
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="page">
+    <div class="bubble">
+      <p class="typewriter" data-text="I know the last year wasn’t easy. Moving on is messy, slow, and annoying — but honestly… FUCK KARTIK."></p>
+    </div>
+
+    <div class="bubble left">
+      <p class="typewriter" data-text="You care too deeply, love too genuinely, and that’s not a weakness — even if it feels like one sometimes."></p>
+    </div>
+
+    <button onclick="nextPage()">Next ▶</button>
+  </section>
+
+  <!-- PAGE 5 -->
+  <section class="page">
+    <div class="bubble right">
+      <p class="typewriter" data-text="Thanks for forcing me to watch 365: Repeat the Year (even though I never finished it 😭). I’m really glad you exist in my life."></p>
+    </div>
+
+    <div class="bubble">
+      <p class="typewriter" data-text="Our unhinged conversations, random bakchodi, your flat’s drama, my extremely funny jokes — I wouldn’t trade this for anything."></p>
+    </div>
+
+    <button onclick="nextPage()">Next ▶</button>
+  </section>
+
+  <!-- PAGE 6 -->
+  <section class="page">
+    <div class="bubble">
+      <p class="typewriter" data-text="I hope this year gives you peace, a lil more IQs, Vitamin D, and some Iron. Happy 21st ✨"></p>
+    </div>
+
+    <div class="bubble left">
+      <p class="typewriter" data-text="Always here. Always cheering for you."></p>
+    </div>
+
+    <button onclick="nextPage()">🎁 One last thing</button>
+  </section>
+
+  <!-- SURPRISE PAGE -->
+  <section class="page surprise">
+    <h2>For You 💖</h2>
+
+    <img src="surprise.jpg" class="gift-img">
+
+    <p class="soft-text">
+      Just a small reminder<br>
+      that you’re loved — more than you realize 🌸
+    </p>
+
+    <button onclick="playMusic()">🎵 Play Song</button>
+  </section>
+
+</div>
+
+<audio id="bg-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
