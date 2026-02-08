@@ -6,20 +6,45 @@ const pages = document.querySelectorAll(".page");
 const music = document.getElementById("bg-music");
 let musicStarted = false;
 
+music.volume = 0; // start silent
+
+function fadeInMusic() {
+  let volume = 0;
+  const fade = setInterval(() => {
+    if (volume < 1) {
+      volume += 0.05;
+      music.volume = Math.min(volume, 1);
+    } else {
+      clearInterval(fade);
+    }
+  }, 100);
+}
+
 function nextPage() {
-  // START MUSIC ON FIRST "NEXT" CLICK
   if (!musicStarted) {
     music.play().then(() => {
       musicStarted = true;
-    }).catch(() => {
-      console.log("Music blocked");
-    });
+      fadeInMusic();
+      document.getElementById("musicToggle").textContent = "⏸";
+    }).catch(() => {});
   }
 
   pages[currentPage].classList.remove("active");
   currentPage++;
   pages[currentPage].classList.add("active");
   startTyping(pages[currentPage]);
+}
+
+/* ⏯ MUSIC TOGGLE */
+function toggleMusic() {
+  const btn = document.getElementById("musicToggle");
+  if (music.paused) {
+    music.play();
+    btn.textContent = "⏸";
+  } else {
+    music.pause();
+    btn.textContent = "▶️";
+  }
 }
 
 /* 🌙 Night Mode */
