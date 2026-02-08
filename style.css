@@ -55,34 +55,27 @@ body.night #modeToggle {
 }
 
 .page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 20px 100px; /* top | sides | bottom */
+  box-sizing: border-box;
+
   display: none;
-  background: white;
-  border: 3px solid black;
-  padding: 20px;
-  box-shadow: 8px 8px 0 black;
-  animation: fade 0.6s ease;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  overflow-y: auto;   /* ⭐ THIS IS IMPORTANT */
 }
 
-body.night .page {
-  background: #2a2933;
-  border-color: #eee;
-  box-shadow: 8px 8px 0 #000;
+.page.active {
+  display: flex;
 }
-
-.page.active { display: block; }
 
 h1, h2 {
   font-family: 'Rampart One', cursive;
   text-align: center;
-}
-
-/* Glow effect */
-.glow {
-  transition: text-shadow 0.5s;
-}
-
-body.night .glow {
-  text-shadow: 0 0 6px rgba(255,200,220,0.8);
 }
 
 .hero-img {
