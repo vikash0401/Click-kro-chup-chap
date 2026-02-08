@@ -29,7 +29,7 @@
     <img src="her.jpg" class="hero-img">
 
     <div class="bubble">
-      <p class="typewriter glow" data-text="On this day… someone very special was born."></p>
+      <p class="typewriter" data-text="On this day… someone very special was born."></p>
     </div>
 
     <button onclick="nextPage()">Next ▶</button>
@@ -38,7 +38,7 @@
   <!-- PAGE 2 -->
   <section class="page">
     <div class="bubble">
-      <p class="typewriter glow" data-text="Happy Birthday, Unnati 🌙🖤"></p>
+      <p class="typewriter" data-text="Happy Birthday, Unnati 🌙🖤"></p>
     </div>
 
     <div class="bubble left">
@@ -60,11 +60,11 @@
   <!-- PAGE 4 -->
   <section class="page">
     <div class="bubble">
-      <p class="typewriter glow" data-text="I know the last year wasn’t easy for you. Moving on is messy, slow, and annoying, but honestly… FUCK YOU KARTIK."></p>
+      <p class="typewriter" data-text="I know the last year wasn’t easy for you. Moving on is messy, slow, and annoying, but honestly… FUCK YOU KARTIK."></p>
     </div>
 
     <div class="bubble left">
-      <p class="typewriter glow" data-text="I feel You care too deeply, love too genuinely, and that’s not a weakness, even if it feels like one sometimes."></p>
+      <p class="typewriter" data-text="I feel You care too deeply, love too genuinely, and that’s not a weakness, even if it feels like one sometimes."></p>
     </div>
 
     <button onclick="nextPage()">Next ▶</button>
@@ -86,30 +86,34 @@
   <!-- PAGE 6 -->
   <section class="page">
     <div class="bubble">
-      <p class="typewriter glow" data-text="I hope this year gives you peace, a lil more IQs, Vitamin D, and some Iron."></p>
+      <p class="typewriter" data-text="I hope this year gives you peace, a lil more IQs, Vitamin D, and some Iron."></p>
     </div>
 
     <div class="bubble left">
-      <p class="typewriter glow" data-text="Happy 21st<3. Always here. Always cheering for you."></p>
+      <p class="typewriter" data-text="Happy 21st<3. Always here. Always cheering for you."></p>
     </div>
 
     <button onclick="nextPage()">🎁 One last thing</button>
   </section>
 
   <!-- SURPRISE -->
-  <section class="page surprise">
-    <h2 class="glow">For You 💖</h2>
+<section class="page surprise">
+  <h2>For You 💖</h2>
 
-    <img src="surprise.jpg" class="gift-img">
+  <img src="surprise.jpg" alt="Surprise Gift">
 
-    <p class="soft-text glow">
-      Just a small reminder<br>
-      that you’re loved — more than you realize 🌸
-    </p>
+  <p class="soft-text">
+    Just a small reminder<br>
+    that you're loved — more than you realize 🌸
+  </p>
+</section>
 
-    <button onclick="startMusic()">🎵 Play Song</button>
-  </section>
-
+    <!-- 🎁 Gift Overlay -->
+<div id="giftOverlay">
+  <div class="giftBox">
+    <span class="closeGift" onclick="closeGift()">✕</span>
+    <img src="surprise.jpg" alt="Surprise Gift">
+  </div>
 </div>
 
 <audio id="bg-music" loop preload="auto">
